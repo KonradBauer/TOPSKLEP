@@ -5,6 +5,7 @@
 .product img {
   width: 250px;
   height: 400px;
+  object-fit: contain;
 }
 
 .product h3 {
