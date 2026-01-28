@@ -1,5 +1,7 @@
 import { Layout } from "../../components/Layout/Layout";
 import { CartProductsList } from "../../components/CartProductsList/CartProductsList";
+import { FlexContainer } from "../../components/FlexContainer/FlexContainer";
+import { CartSummary } from "../../components/CartSummary/CartSummary";
 
 export const Cart = () => {
   const cartProducts = [
@@ -45,7 +47,10 @@ export const Cart = () => {
 
   return (
     <Layout>
-      <CartProductsList products={cartProducts} />
+      <FlexContainer>
+        <CartProductsList products={cartProducts} />
+        <CartSummary products={cartProducts} />
+      </FlexContainer>
     </Layout>
   );
 };
