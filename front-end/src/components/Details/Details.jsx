@@ -1,16 +1,29 @@
 import CAR_ICON from "../../assets/car.svg";
 import RETURN_ICON from "../../assets/return.svg";
 import { FullWidthButton } from "../FullWidthButton/FullWidthButton";
+import styles from "./Details.module.css";
+import { Accordion } from "../Accordion/Accordion.jsx";
 
 export const Details = ({ product }) => {
+  const accordionContent = [
+    {
+      title: "Opis produktu",
+      content: product.description,
+    },
+    {
+      title: "Wskazówki pielęgnacyjne",
+      content: product.maintenanceInfo,
+    },
+  ];
+
   return (
-    <div>
+    <div className={styles.details}>
       <h2>{product.brand}</h2>
-      <p>{product.productName}</p>
-      <p>{product.pricePLN}zł</p>
+      <p className={styles.productName}>{product.productName}</p>
+      <p className={styles.price}>{product.pricePLN}zł</p>
       <FullWidthButton isBlack={true}>Dodaj do koszyka</FullWidthButton>
 
-      <ul>
+      <ul className={styles.extraInfo}>
         <li>
           <img src={CAR_ICON} />
           Dostawa do 24h
@@ -20,6 +33,7 @@ export const Details = ({ product }) => {
           Zwrot do 100 dni!
         </li>
       </ul>
+      <Accordion items={accordionContent} />
     </div>
   );
 };

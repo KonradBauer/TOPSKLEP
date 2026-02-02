@@ -29,7 +29,7 @@ export const ProductDetails = () => {
     <Layout>
       <FlexContainer>
         <ExpandableMenu />
-        <div>
+        <div style={{ width: "100%" }}>
           <FlexContainer>
             <Breadcrumbs />
             <Photos product={product} />
