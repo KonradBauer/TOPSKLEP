@@ -2,11 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap:1rem;
-    padding:1rem;
+    gap: 1rem;
+    padding: 1rem;
 }
 
-.mainMenu.li a {
+.mainMenu li a {
     text-transform: uppercase;
     color: var(--color-text-grey);
     padding: 1rem 0;

@@ -1,5 +1,5 @@
 import styles from "./CenteredContent.module.css";
 
-export const CenteredContent = ({ children }) => {
-  return <div className={styles.wrapper}>{children}</div>;
-};
+export function CenteredContent({ children }) {
+    return <div className={styles.wrapper}>{children}</div>;
+}

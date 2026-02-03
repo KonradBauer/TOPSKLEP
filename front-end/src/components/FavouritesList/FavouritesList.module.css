@@ -1,5 +1,5 @@
 .favouritesList {
-  margin-top: 1rem;
-  padding: 1rem;
-  background-color: var(--color-grey);
+    padding: 1rem;
+    background-color: var(--color-grey);
+    margin-top: 1rem;
 }
