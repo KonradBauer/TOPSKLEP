@@ -5,7 +5,7 @@ import HEART from "../../assets/heart.svg";
 import { Link } from "react-router-dom";
 
 export function IconMenu() {
-    const cartItems = 0;
+    const cartItems = 2;
 
     return (
         <ul className={styles.iconMenu}>

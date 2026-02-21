@@ -3,7 +3,7 @@ import styles from "./CartProductsList.module.css";
 import { CenteredContent } from "../CenteredContent/CenteredContent";
 import { CartProduct } from "../CartProduct/CartProduct";
 
-export function CartProductsList({ products }) {
+export function CartProductsList({ products, onRemove }) {
     return (
         <CenteredContent>
             <div className={styles.favouritesList}>
@@ -11,7 +11,11 @@ export function CartProductsList({ products }) {
                 <div>
                     {products.map((product) => {
                         return (
-                            <CartProduct key={product.id} product={product} />
+                            <CartProduct
+                                key={product.id}
+                                product={product}
+                                onRemove={onRemove}
+                            />
                         );
                     })}
                 </div>
